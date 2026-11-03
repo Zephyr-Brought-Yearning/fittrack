@@ -19,17 +19,64 @@ nav{position:fixed;z-index:10;bottom:0;left:0;right:0;display:flex;justify-conte
 .recommendgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:9px}.recommendgrid .foodcard{display:grid;grid-template-columns:58px minmax(0,1fr) auto;align-items:center;gap:12px;min-height:84px}.recommendgrid .foodemoji{width:58px;height:58px;flex-basis:58px}.recommendgrid .foodinfo{min-width:0}.recommendgrid .foodinfo b{font-size:15px;white-space:normal;word-break:keep-all}.recommendgrid .macrotext{font-size:12px;line-height:1.55;white-space:normal;overflow-wrap:anywhere}.recommendgrid .foodcard button{width:40px;height:40px;padding:0;font-size:20px;border-radius:12px}.tip{border-radius:15px;padding:13px;background:linear-gradient(135deg,#20374b,#19293e);border:1px solid #314a63}.tip .emoji{font-size:25px}.tip b{display:block;margin:4px 0}.record{padding:10px 0;border-bottom:1px solid var(--line)}.record:last-child{border:0}.notice{font-size:12px;color:var(--muted);background:#1a2b40;border-radius:12px;padding:11px}.targetline{display:flex;justify-content:space-between;gap:8px;font-size:12px;margin-top:9px}.chart{display:flex;align-items:end;gap:7px;height:95px;padding:8px 2px}.bar{flex:1;background:linear-gradient(180deg,#48d5a1,#247b72);border-radius:6px 6px 2px 2px;min-height:3px;position:relative}.bar span{position:absolute;bottom:-19px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted);white-space:nowrap}
 .action-row{display:flex;gap:6px;align-items:center}.action-row button{padding:7px 9px;font-size:11px}.mini-note{font-size:11px;color:var(--muted);line-height:1.55}.insight{border:1px solid #31584f;background:#112b2b;border-radius:12px;padding:12px;margin-top:10px}.insight b{color:#9ce8c8}.history-actions{display:flex;gap:6px;flex-wrap:wrap}.history-actions button{padding:6px 9px;font-size:11px}
 @media(max-width:360px){main{padding-left:10px;padding-right:10px}.card{padding:12px}.stats{gap:5px}.stat{padding:8px}.stat b{font-size:18px}.foodemoji{width:50px;height:50px;flex-basis:50px;font-size:28px}.setrow{grid-template-columns:32px minmax(0,1fr) minmax(0,1fr)}}
+
+/* Premium FitTrack dashboard refresh */
+:root{--bg:#080e18;--panel:#111a27;--panel2:#172333;--line:#263344;--txt:#f4f7fb;--muted:#94a3b8;--green:#45dfb0;--blue:#65b8ff;--orange:#ffad65}
+body{background:radial-gradient(ellipse at 50% -12%,#1a3442 0,transparent 44%),#080e18;font-size:15px}
+header{background:transparent;border:0;padding:22px 20px 10px;max-width:760px;margin:auto}
+.brandicon{box-shadow:0 8px 25px #2dd6a322}
+main{max-width:760px;padding:12px 16px 28px}
+.card,.dash-panel{background:linear-gradient(145deg,#141f2e,#101925);border:1px solid #243345;border-radius:22px;box-shadow:0 12px 30px #0003}
+.dash-greeting{display:flex;justify-content:space-between;align-items:center;margin:5px 2px 18px}
+.dash-greeting h2{font-size:21px;margin:5px 0 2px}
+.dash-greeting .brandicon{width:50px;height:50px;font-size:26px}
+.bulk-hero{position:relative;overflow:hidden;min-height:178px;border:1px solid #31514f;border-radius:25px;padding:20px;background:radial-gradient(circle at 85% 25%,#28645a88,transparent 32%),linear-gradient(115deg,#173a3a,#17263a 68%,#242d43);margin-bottom:14px}
+.bulk-copy{position:relative;z-index:1;max-width:75%}.bulk-title{font-size:39px;font-weight:850;letter-spacing:-1.5px;margin-top:10px}.bulk-title small{font-size:16px;font-weight:500}
+.bulk-progress{height:9px;border-radius:20px;background:#ffffff24;margin-top:14px;overflow:hidden}.bulk-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#43ddb0,#9af2d2);border-radius:20px}
+.bulk-foot{display:flex;justify-content:space-between;font-size:11px;color:#c0d1d5;margin-top:8px}
+.bulk-art{position:absolute;right:16px;bottom:14px;font-size:94px;opacity:.22;filter:grayscale(.3)}
+.dash-macros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-bottom:14px}
+.macro-tile{min-width:0;padding:14px;border-radius:18px;background:linear-gradient(145deg,#172333,#111b28);border:1px solid #202e40}
+.macro-tile>span{font-size:12px;color:#c5d0df}.macro-tile>b{display:block;font-size:18px;margin-top:6px;white-space:nowrap}.macro-tile b small{font-size:12px;color:var(--muted);font-weight:500}.macro-tile .progress{height:5px;margin-top:10px}
+.dash-two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}.dash-panel{padding:16px;margin-bottom:12px;min-width:0}
+.today-panel{background:linear-gradient(145deg,#173d3b,#172b3b);border-color:#315a55}
+.panel-title{display:flex;justify-content:space-between;align-items:center;font-weight:750;margin-bottom:13px}.today-panel h2{font-size:23px;margin:10px 0}.today-panel p{min-height:34px}.today-panel button{margin-top:8px;padding:13px}
+.text-button{border:0;background:transparent;color:var(--green);padding:4px;font-size:12px}
+.weekplan{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.weekrow{padding:6px;background:#0c1724;border-radius:10px;gap:5px;grid-template-columns:28px minmax(0,1fr)}.weekrow select{font-size:10px;padding:7px 4px}.week-summary{margin-top:9px;font-size:10px}
+.dash-shortcuts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.dash-shortcuts button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:4px;padding:14px;background:linear-gradient(145deg,#172536,#111b28);border:1px solid #25364a;border-radius:17px;min-height:100px}
+.dash-shortcuts button>span{font-size:23px}.dash-shortcuts button b{font-size:15px}.dash-shortcuts button small{font-size:11px;color:var(--muted)}
+.dash-panel .stats{margin-top:10px}.dash-panel .stat{background:#0b1623;border-color:#253345}
+#mealSummary{padding:9px 0}
+nav{background:#0b1422ed;border-top:1px solid #263548;padding-top:10px}
+nav button.active{background:#153a35;color:#5ce3b6}
+button.primary{background:linear-gradient(105deg,#58e7bc,#2cc89b);box-shadow:0 5px 16px #2ac99a25}
+@media(max-width:390px){.dash-two{grid-template-columns:1fr}.bulk-copy{max-width:83%}.bulk-art{font-size:75px}.macro-tile{padding:11px}.macro-tile>b{font-size:16px}}
 </style></head>
 <body>
 <header><div class="brand"><div class="brandicon">💪</div><div><div class="eyebrow">FITTRACK · YOUR BULK JOURNEY</div><h1>增肌助手</h1><div class="small">稳步训练，好好吃饭，记录每一点进步</div></div></div></header>
 <main>
 <section id="home" class="page active">
-<div class="hero"><div class="row"><span class="pill">今日训练建议</span><span class="small" id="dateLabel"></span></div><div class="big" id="homeDay">胸部＋三头</div><div class="small">训练不是拼一次，而是持续积累。</div><button class="primary full" style="margin-top:13px" onclick="go('training')">开始记录训练　→</button></div>
-<div class="card weekly-card"><div class="row"><div><div class="eyebrow">YOUR WEEK</div><h3>本周训练安排</h3></div><span class="small">可自由调整</span></div><p class="small">点选每天的训练部位，也可以安排休息日。修改会自动保存。</p><div id="weekPlan" class="weekplan"></div></div>
-<div class="stats"><div class="stat"><span>当前体重</span><b id="topWeight">53</b><span>kg</span></div><div class="stat"><span>目标体重</span><b id="topGoal">60</b><span>kg</span></div><div class="stat"><span>训练次数</span><b id="sessionCount">0</b><span>次</span></div></div>
-<div class="card" style="margin-top:12px"><div class="row"><h3>今日营养进度</h3><button class="ghost" onclick="go('food')">记饮食</button></div><div class="row" style="margin-top:12px"><b>热量</b><b><span id="homeKcal">0</span> <span class="muted">/</span> <span id="targetKcal">2500</span> kcal</b></div><div class="progress"><span id="kcalBar" style="width:0%"></span></div><div id="homeMacros"></div><div class="macrobar"><span id="homePBar" class="pcol"></span><span id="homeCBar" class="ccol"></span><span id="homeFBar" class="fcol"></span></div><div class="small">绿色 蛋白质　蓝色 碳水　橙色 脂肪</div></div>
-<div class="card"><div class="row"><h3>今天练什么？</h3><span class="pill" id="homePlanTag">DAY 1</span></div><div id="todayExercises"></div><button class="ghost full" onclick="go('plan')">查看完整训练计划</button></div>
-<div class="card"><div class="row"><h3>今日饮食</h3><span class="small" id="mealCount">0 项记录</span></div><div id="mealSummary" class="small">还没有饮食记录，先从一顿早餐开始吧。</div></div>
+<div class="dash-greeting"><div><div class="eyebrow">FITTRACK · YOUR BULK JOURNEY</div><h2>今天也向目标靠近一点</h2><div class="small" id="dateLabel"></div></div><div class="brandicon">💪</div></div>
+<div class="bulk-hero"><div class="bulk-copy"><span class="pill">增肌阶段</span><div class="bulk-title">53.0 <small>kg</small></div><div class="small">目标体重 <b id="topGoal">60</b> kg · 稳步增加</div><div class="bulk-progress"><span id="bulkProgress"></span></div><div class="bulk-foot"><span>当前 <b id="topWeight">53</b> kg</span><span>距离目标 +<b id="bulkRemaining">7</b> kg</span></div></div><div class="bulk-art">🏋️</div></div>
+<div class="dash-macros">
+<div class="macro-tile"><span>🔥 热量</span><b><i id="homeKcal">0</i><small> / <span id="targetKcal">2850</span></small></b><div class="progress"><span id="kcalBar" style="width:0%"></span></div></div>
+<div class="macro-tile"><span>🥚 蛋白质</span><b id="dashProtein">0 / 106 g</b><div class="progress"><span id="dashProteinBar"></span></div></div>
+<div class="macro-tile"><span>🍚 碳水</span><b id="dashCarbs">0 / 499 g</b><div class="progress"><span id="dashCarbsBar"></span></div></div>
+<div class="macro-tile"><span>🥑 脂肪</span><b id="dashFat">0 / 48 g</b><div class="progress"><span id="dashFatBar"></span></div></div>
+</div>
+<div class="dash-two">
+<div class="dash-panel today-panel"><div class="panel-title"><span>🏋️ 今日训练</span><span class="small" id="homePlanTag">DAY 1</span></div><h2 id="homeDay">胸部＋三头</h2><p class="small">按计划完成今天的训练，记录每一组进步。</p><button class="primary full" onclick="go('training')">▶ 开始训练</button></div>
+<div class="dash-panel"><div class="panel-title"><span>🗓️ 本周计划</span><button class="text-button" onclick="go('plan')">调整 →</button></div><div id="weekPlan" class="weekplan"></div><div class="small week-summary">按恢复情况灵活安排训练与休息</div></div>
+</div>
+<div class="dash-shortcuts">
+<button onclick="go('plan')"><span>▤</span><b>训练计划</b><small>三分化 · 自由安排</small></button>
+<button onclick="go('training')"><span>🏋️</span><b>动作与训练</b><small>逐组记录 · 休息计时</small></button>
+<button onclick="go('food')"><span>🥗</span><b>饮食营养</b><small>饮食记录 · 食物推荐</small></button>
+<button onclick="go('data')"><span>▥</span><b>成长数据</b><small>体重 · 卧推 · 趋势</small></button>
+</div>
+<div class="dash-panel"><div class="panel-title"><span>📈 增肌进度</span><button class="text-button" onclick="go('data')">查看数据 →</button></div><div class="stats"><div class="stat"><span>当前体重</span><b id="topWeightSmall">53</b><span>kg</span></div><div class="stat"><span>目标体重</span><b id="topGoalSmall">60</b><span>kg</span></div><div class="stat"><span>训练次数</span><b id="sessionCount">0</b><span>次</span></div></div></div>
+<div class="dash-panel"><div class="panel-title"><span>🍽️ 今日饮食</span><button class="text-button" onclick="go('food')">记饮食 →</button></div><div id="mealSummary" class="small">还没有饮食记录，先从一顿早餐开始吧。</div><span class="small" id="mealCount">0 项记录</span><div class="macrobar"><span id="homePBar" class="pcol"></span><span id="homeCBar" class="ccol"></span><span id="homeFBar" class="fcol"></span></div><div id="homeMacros" class="small"></div></div>
 </section>
 <section id="plan" class="page">
 <div class="sectionhead"><div><div class="eyebrow">YOUR 3-DAY SPLIT</div><h2>每周计划</h2></div><span class="small">循序渐进 · 重视恢复</span></div>
