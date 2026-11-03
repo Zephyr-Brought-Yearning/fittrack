@@ -40,7 +40,7 @@ main{max-width:760px;padding:12px 16px 28px}
 .macro-tile>span{font-size:12px;color:#c5d0df}.macro-tile>b{display:block;font-size:18px;margin-top:6px;white-space:nowrap}.macro-tile b small{font-size:12px;color:var(--muted);font-weight:500}.macro-tile .progress{height:5px;margin-top:10px}
 .dash-two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}.dash-panel{padding:16px;margin-bottom:12px;min-width:0}
 .today-panel{background:linear-gradient(145deg,#173d3b,#172b3b);border-color:#315a55}
-.panel-title{display:flex;justify-content:space-between;align-items:center;font-weight:750;margin-bottom:13px}.today-panel h2{font-size:23px;margin:10px 0}.today-panel p{min-height:34px}.today-panel button{margin-top:8px;padding:13px}
+.panel-title{display:flex;justify-content:space-between;align-items:center;font-weight:750;margin-bottom:13px}.today-panel h2{font-size:23px;margin:10px 0}.today-panel p{min-height:34px}.today-preview .record{font-size:12px;padding:6px 0}.today-preview .record .small{font-size:10px}.today-panel button{margin-top:8px;padding:13px}
 .text-button{border:0;background:transparent;color:var(--green);padding:4px;font-size:12px}
 .weekplan{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.weekrow{padding:6px;background:#0c1724;border-radius:10px;gap:5px;grid-template-columns:28px minmax(0,1fr)}.weekrow select{font-size:10px;padding:7px 4px}.week-summary{margin-top:9px;font-size:10px}
 .dash-shortcuts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
@@ -66,7 +66,7 @@ button.primary{background:linear-gradient(105deg,#58e7bc,#2cc89b);box-shadow:0 5
 <div class="macro-tile"><span>🥑 脂肪</span><b id="dashFat">0 / 48 g</b><div class="progress"><span id="dashFatBar"></span></div></div>
 </div>
 <div class="dash-two">
-<div class="dash-panel today-panel"><div class="panel-title"><span>🏋️ 今日训练</span><span class="small" id="homePlanTag">DAY 1</span></div><h2 id="homeDay">胸部＋三头</h2><p class="small">按计划完成今天的训练，记录每一组进步。</p><button class="primary full" onclick="go('training')">▶ 开始训练</button></div>
+<div class="dash-panel today-panel"><div class="panel-title"><span>🏋️ 今日训练</span><span class="small" id="homePlanTag">DAY 1</span></div><h2 id="homeDay">胸部＋三头</h2><p class="small">按计划完成今天的训练，记录每一组进步。</p><div id="todayExercises" class="today-preview"></div><button class="primary full" onclick="go('training')">▶ 开始训练</button></div>
 <div class="dash-panel"><div class="panel-title"><span>🗓️ 本周计划</span><button class="text-button" onclick="go('plan')">调整 →</button></div><div id="weekPlan" class="weekplan"></div><div class="small week-summary">按恢复情况灵活安排训练与休息</div></div>
 </div>
 <div class="dash-shortcuts">
