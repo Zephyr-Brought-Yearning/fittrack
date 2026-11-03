@@ -30,10 +30,10 @@ nav{position:fixed;z-index:10;bottom:0;left:0;right:0;display:flex;justify-conte
 <div class="card"><div class="row"><h3>今日饮食</h3><span class="small" id="mealCount">0 项记录</span></div><div id="mealSummary" class="small">还没有饮食记录，先从一顿早餐开始吧。</div></div>
 </section>
 <section id="plan" class="page">
-<div class="sectionhead"><div><div class="eyebrow">WEEKLY ROUTINE</div><h2>训练计划</h2></div><span class="small">循序渐进 · 重视恢复</span></div>
+<div class="sectionhead"><div><div class="eyebrow">YOUR 3-DAY SPLIT</div><h2>每周计划</h2></div><span class="small">循序渐进 · 重视恢复</span></div>
 <div class="daytabs"><button class="selected" onclick="showPlan(0,this)">DAY 1<br>胸＋三头</button><button onclick="showPlan(1,this)">DAY 2<br>背＋二头</button><button onclick="showPlan(2,this)">DAY 3<br>肩部</button><button onclick="showPlan(3,this)">DAY 4<br>恢复</button></div>
 <div class="card"><div class="row"><h3 id="planTitle">胸部＋三头</h3><span class="pill" id="planTime">45–60分钟</span></div><div id="planItems"></div><div class="notice" id="planTip"></div></div>
-<div class="card"><h3>训练小原则</h3><div class="record">🎯 <b>强度：</b>大多数组保留 1–3 次余力，不必每组力竭。</div><div class="record">📈 <b>进步：</b>先把目标次数做扎实，再小幅增加重量。</div><div class="record">🛌 <b>恢复：</b>同一肌群间隔约 48 小时，睡眠和饮食同样重要。</div><div class="record">🦵 <b>别忽略下肢：</b>建议逐步增加深蹲、腿举、腿弯举和提踵，让训练更均衡。</div></div>
+<div class="card"><h3>训练小原则</h3><div class="record">🎯 <b>强度：</b>大多数组保留 1–3 次余力，不必每组力竭。</div><div class="record">📈 <b>进步：</b>先把目标次数做扎实，再小幅增加重量。</div><div class="record">🛌 <b>恢复：</b>同一肌群间隔约 48 小时，睡眠和饮食同样重要。</div><div class="record">🧭 <b>当前阶段：</b>按你的时间安排暂时采用胸、背、肩三分化；后续有余力时再评估是否加入下肢训练。</div></div>
 </section>
 <section id="training" class="page">
 <div class="sectionhead"><div><div class="eyebrow">WORKOUT LOG</div><h2>训练记录</h2></div><span class="pill">逐组记录</span></div>
@@ -55,13 +55,13 @@ nav{position:fixed;z-index:10;bottom:0;left:0;right:0;display:flex;justify-conte
 <div class="card"><h3>一日增肌搭配示例</h3><div class="foodcard"><div class="foodemoji">🥚</div><div class="foodinfo"><b>早餐｜鸡蛋牛奶燕麦</b><div class="macrotext">燕麦 + 牛奶 + 2个鸡蛋 + 香蕉<br>碳水打底，蛋白质开启一天</div></div></div><div class="foodcard" style="margin-top:8px"><div class="foodemoji">🍱</div><div class="foodinfo"><b>午餐｜鸡肉米饭套餐</b><div class="macrotext">米饭 + 鸡腿/鸡胸肉 + 西兰花<br>主食足量，搭配蔬菜</div></div></div><div class="foodcard" style="margin-top:8px"><div class="foodemoji">🥛</div><div class="foodinfo"><b>加餐｜酸奶水果坚果</b><div class="macrotext">希腊酸奶/牛奶 + 香蕉 + 少量坚果</div></div></div><div class="foodcard" style="margin-top:8px"><div class="foodemoji">🍚</div><div class="foodinfo"><b>晚餐｜牛肉土豆饭</b><div class="macrotext">米饭/土豆 + 牛肉/鱼肉 + 绿叶菜</div></div></div><div class="notice" style="margin-top:10px">食物宏量营养素会因品牌、烹饪方式和份量而变化；推荐库数据是常见份量的近似值。尽量选择多样化食物，不需要每天吃得一模一样。</div></div>
 </section>
 <section id="stats" class="page">
-<div class="sectionhead"><div><div class="eyebrow">PROGRESS TRACKER</div><h2>身体数据</h2></div></div>
+<div class="sectionhead"><div><div class="eyebrow">YOUR GROWTH</div><h2>成长数据</h2></div></div>
 <div class="card"><h3>记录体重</h3><div class="fieldgrid"><div><label>日期</label><input id="weightDate" type="date"></div><div><label>晨起体重 kg</label><input id="weightValue" type="number" step=".1"></div></div><button class="primary full" style="margin-top:10px" onclick="addWeight()">保存体重</button><div id="weightChart" class="chart"></div><div id="weightHistory" class="small"></div></div>
 <div class="card"><h3>卧推记录</h3><div class="fieldgrid"><div><label>日期</label><input id="benchDate" type="date"></div><div><label>重量 kg</label><input id="benchWeight" type="number" step=".5"></div></div><label>各组次数（旧记录可继续用逗号输入）</label><input id="benchReps" placeholder="8,8,8,8"><button class="primary full" style="margin-top:10px" onclick="addBench()">保存卧推</button><div id="benchHistory" class="small"></div></div>
 <div class="card"><h3>数据备份</h3><p class="small">记录保存在当前 iPhone 浏览器本机。清除浏览器数据前请先导出备份。</p><div class="grid2"><button onclick="exportData()">导出 JSON 备份</button><button onclick="document.getElementById('importFile').click()">导入备份</button></div><input id="importFile" type="file" accept=".json" style="display:none" onchange="importData(event)"><button class="full" onclick="clearData()" style="color:#ff9b9b;margin-top:9px">清空全部记录</button></div>
 </section>
 </main>
-<nav><button class="active" data-page="home" onclick="go('home')"><span class="ico">🏠</span>首页</button><button data-page="plan" onclick="go('plan')"><span class="ico">📋</span>计划</button><button data-page="training" onclick="go('training')"><span class="ico">🏋️</span>训练</button><button data-page="food" onclick="go('food')"><span class="ico">🥗</span>饮食</button><button data-page="stats" onclick="go('stats')"><span class="ico">📈</span>数据</button></nav>
+<nav><button class="active" data-page="home" onclick="go('home')"><span class="ico">🏠</span>总览</button><button data-page="plan" onclick="go('plan')"><span class="ico">🗓️</span>计划</button><button data-page="training" onclick="go('training')"><span class="ico">🏋️</span>训练</button><button data-page="food" onclick="go('food')"><span class="ico">🥗</span>饮食</button><button data-page="stats" onclick="go('stats')"><span class="ico">📈</span>成长</button></nav>
 <script>
 const plans=[
 {name:'胸部＋三头',time:'45–60分钟',tip:'以卧推为主项，先恢复稳定的动作质量和训练容量。每组保留约1–3次余力，不必每组力竭。',items:[['平板杠铃卧推',4,'6–8','40'],['上斜哑铃卧推',3,'8–12',''],['蝴蝶机夹胸',2,'12–15',''],['绳索下压',2,'10–12',''],['过顶绳索臂屈伸',2,'10–15','']]},
